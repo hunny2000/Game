@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<style>
+			@font-face {
+  			font-family: Pixel;
+  			src: url(PixelFJVerdana12pt.ttf);
+			}
+			@font-face {
+  			font-family: Pixel2;
+  			src: url(SUBWT___.ttf);
+			}
+			body {
+
+				background-image: url('triangles.png');
+
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;	
+			}
+
+			* {
+			  box-sizing: border-box;
+			}
+			.column {
+			float: left;
+			padding: 10px;
+			height: 2500px; /* Should be removed. Only for demonstration */
+			}
+
+			.left, .right {
+			width: 15%;
+			}
+
+			.leftMain {
+			width: 70%;
+			}
+			.rightMain {
+			width: 30%;
+			}
+
+			.middle {
+			width: 70%;
+			}
+
+			
+    	</style>
+
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SNAKE GAME</title>
+
+		<link rel="stylesheet" href="TemplateData/style.css">
+
+
+		<script src="TemplateData/UnityProgress.js"></script>
+
+		<script src="Build/UnityLoader.js"></script>
+
+		<script>
+			var unityInstance = UnityLoader.instantiate("SnakeContainer", "Build/snake_html.json", {onProgress: UnityProgress});
+		</script>
+	</head>
+
+	<body >
+		<div class="row">
+			<div class="column left" style="background-color:rgba(0,0,0,0);">
+
+			</div>
+			<div class="column middle" style="background-color:rgba(192, 192, 192,0.5);font-family:Pixel;">
+				<div align="center" >
+					<div id="SnakeContainer" style="width: 400px; height: 700px"></div>
+					<div class="footer">
+						<div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+						<div class="title" style="font-family:Pixel;font-size: 30px;"><b>Snake Game</b></div>
+					</div>
+				</div>
+
+				<div class = "row">
+					<div class="column leftMain" style="font-size: small;">
+
+						<p>Feeling nostalgic for retro games? Download Snake Game, a fun classic game and dive into the memories of bygone times and simple addictive games!</p>
+
+						<p><u>ADDICTING GAMES ARE GETTING SMALLER!</u> </p>
+
+						<img src="3.jpg"><br>
+
+						<p>When was the last time you played a classic snake game? Wanna give it a try again? This fun game takes you back to the time when cool games were simple, yet addictive. So, if you are a fan of retro games or just in search of a simple game to keep the clock ticking, get this free Snake Game and enjoy!</p>
+						<p>Exciting adventure of the bouncing ball through the helix tower labyrinth.</p>
+						<p>One-tap easy-to-learn controls, rich visual effects and addictive gameplay mechanics.</p>
+						<p>How long can you last before your tail becomes your dinner? Take the challenge and eat all those apples! Test all the snake games within the game and join our hall of fame by being one of the longest lasting players. Ready? Go for it!</p>
+
+						<p> Classic retro games have never been more fun! Download Snake Game and add this simple game to the list of the cool games you have recently played. RETRO GAMES ARE IN so do not hesitate to join the craze!</p>
+						<p>Checkout creators Instagram</p>
+						<p><strong><a href="https://instagram.com/prototype.studios?igshid=1hw7ikcphs7at"rel="nofollow noopener">Prototype studio</a></strong></p>
+						
+					</div>
+				</div>
+				<div class="column rightMain">
+					<img src="1.jpg">
+
+					<img src="2.jpg">
+				</div>
+					
+			</div>
+			<div class="column right" style="background-color:rgba(0,0,0,0);">
+
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  	<style>
+			@font-face {
+  			font-family: Pixel;
+  			src: url(PixelFJVerdana12pt.ttf);
+			}
+			@font-face {
+  			font-family: Pixel2;
+  			src: url(SUBWT___.ttf);
+			}
+      body {
+        background-image: url('triangles.png');
+
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      .column {
+        float: left;
+        padding: 10px;
+        height: 2500px; /* Should be removed. Only for demonstration */
+      }
+
+      .left, .right {
+        width: 15%;
+      }
+
+      .leftMain {
+        width: 70%;
+      }
+      .rightMain {
+        width: 30%;
+      }
+
+      .middle {
+        width: 70%;
+      }
+    	</style>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Spiral Leaper</title>
+    
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Spiral Leaper.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left" style="background-color:rgba(0,0,0,0);">
+
+      </div>
+      <div class="column middle" style="background-color:rgba(192, 192, 192,0.5);font-family:Pixel;">
+        <div align="center">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title" style="font-family:Pixel;font-size: 30px;"><b>Spiral Leaper</b></div>
+      </div>
+    </div>
+
+        <div class = "row">
+          <div class="column leftMain" style="font-size: small;">
+            <p>Get to the bottom!</p>
+            <p>Exciting adventure of the bouncing ball through the helix tower labyrinth.</p>
+            <p>One-tap easy-to-learn controls, rich visual effects and addictive gameplay mechanics.</p>
+            <p>Checkout creators Instagram</p>
+            <p><strong><a href="https://instagram.com/prototype.studios?igshid=1hw7ikcphs7at" rel="nofollow noopener">Prototype studio</a></strong></p>
+            <img src="2.jpg">
+            <img src="3.jpg"><br>
+          </div>
+        </div>
+        <div class="column rightMain">
+
+          <img src="1.jpg"><br>
+          
+          <img src="4.jpg"><br>
+        </div>
+          
+      </div>
+      <div class="column right" style="background-color:rgba(0,0,0,0);">
+
+      </div>
+    </div>
+
+  </body>
+</html>

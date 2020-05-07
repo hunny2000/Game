@@ -1,0 +1,16 @@
+{
+"companyName": "HUNNY",
+"productName": "SNAKE GAME",
+"productVersion": "0.1",
+"dataUrl": "snake_html.data.unityweb",
+"wasmCodeUrl": "snake_html.wasm.code.unityweb",
+"wasmFrameworkUrl": "snake_html.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#828080",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.4f1"
+}
