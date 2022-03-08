@@ -60,8 +60,8 @@
 	  
 	function onResize(){
 	  console.log(window.innerWidth + "x" + window.innerHeight);
-	  gameInstance.SendMessage( "Main Camera", "SetHeight", window.innerWidth);
-	  gameInstance.SendMessage( "Main Camera", "SetWidth", window.innerHeight);
+	  gameInstance.SendMessage( "Main Camera", "SetHeight", window.innerHeight);
+	  gameInstance.SendMessage( "Main Camera", "SetWidth", window.innerWidth);
 	  gameInstance.SendMessage( "Main Camera", "OnResize");
 	}
 
