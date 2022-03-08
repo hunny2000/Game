@@ -32,10 +32,14 @@
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        createUnityInstance(canvas, config, progress)
+        createUnityInstance(canvas, config, (progress) => 
+		{
+		  console.log(gameInstance);
+		})
 		.then((unityInstance) => 
 		{
 		  gameInstance = unityInstance;
+		  console.log("SUCESS");
         })
 		.catch((message) => 
 		{
