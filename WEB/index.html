@@ -32,7 +32,7 @@
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        createUnityInstance(canvas, config, (progress)).then((unityInstance) => 
+        createUnityInstance(canvas, config, (progress).then((unityInstance) => 
 		{
 		  gameInstance = unityInstance;
         })
