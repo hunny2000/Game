@@ -56,11 +56,10 @@
 	  console.log(gameInstance);
 	  
 	  function onResize(){
-		canvas.width = w;
-		canvas.height = h;
-		//gameInstance.SendMessage( "Main Camera", "OnResize");
-		//gameInstance.SendMessage( "Main Camera", "SetHeight", h);
-		//gameInstance.SendMessage( "Main Camera", "SetWidth", w);
+		
+		gameInstance.SendMessage( "Main Camera", "OnResize");
+		gameInstance.SendMessage( "Main Camera", "SetHeight", h);
+		gameInstance.SendMessage( "Main Camera", "SetWidth", w);
 	  }
 
 	  document.body.appendChild(script);
