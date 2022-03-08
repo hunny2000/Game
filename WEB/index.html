@@ -50,12 +50,13 @@
 	  
 	  window.addEventListener("resize", onResize);
 
+      document.body.appendChild(script);
+
 	  function onResize(){
 		gameInstance.SendMessage( "DebugTest", "OnResize");
 		gameInstance.SendMessage( "DebugTest", "SetHeight", h);
 		gameInstance.SendMessage( "DebugTest", "SetWidth", w);
 	  }
-      document.body.appendChild(script);
     </script>
   </body>
 </html>
