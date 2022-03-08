@@ -43,6 +43,7 @@
 		  console.log(unityInstance);
 		  console.log(gameInstance);
 		  unityInstance.SendMessage( "DebugTest", "OnResize'");
+		  unityInstance.SendMessage( "Main Camera", "OnResize'");
         })
 		.catch((message) => 
 		{
