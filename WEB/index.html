@@ -53,14 +53,13 @@
 	  console.log(h);
 	  console.log(gameInstance);
 	  
-	  window.addEventListener("resize", onResize);
+	  window.addEventListener('resize', onResize);
 
 	  function onResize(){
 		gameInstance.SendMessage( "Main Camera", "OnResize");
 		gameInstance.SendMessage( "Main Camera", "SetHeight", h);
 		gameInstance.SendMessage( "Main Camera", "SetWidth", w);
 	  }
-      document.body.appendChild(script);
 
     </script>
   </body>
