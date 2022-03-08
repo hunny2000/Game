@@ -10,18 +10,12 @@
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
       <div id="unity-warning"> </div>
     </div>
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
 
@@ -70,7 +64,7 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
+
         }).then((unityInstance) => {
 
 		  gameInstance = unityInstance;
