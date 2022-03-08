@@ -8,48 +8,51 @@
     <link rel="stylesheet" href="TemplateData/style.css">
 
 	<script>
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
+	  window.onload = function() 
+	  {
+		var container = document.querySelector("#unity-container");
+		var canvas = document.querySelector("#unity-canvas");
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WEB.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/WEB.data",
-        frameworkUrl: buildUrl + "/WEB.framework.js",
-        codeUrl: buildUrl + "/WEB.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "PlayfabServer",
-        productVersion: "0.1",
-      };
+		var buildUrl = "Build";
+		var loaderUrl = buildUrl + "/WEB.loader.js";
+		var config = {
+		dataUrl: buildUrl + "/WEB.data",
+		frameworkUrl: buildUrl + "/WEB.framework.js",
+		codeUrl: buildUrl + "/WEB.wasm",
+		streamingAssetsUrl: "StreamingAssets",
+		companyName: "DefaultCompany",
+		productName: "PlayfabServer",
+		productVersion: "0.1",
+		};
 
-	  var gameInstance;
+		var gameInstance;
 
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => 
+		var script = document.createElement("script");
+		script.src = loaderUrl;
+		script.onload = () => {
+		createUnityInstance(canvas, config, (progress) => 
 		{
 
 		})
 		.then((unityInstance) => 
 		{
-		  gameInstance = unityInstance;
-		  console.log("SUCESS");
-		  onResize();
-		  window.addEventListener("resize", onResize);
-        })
+			gameInstance = unityInstance;
+			console.log("SUCESS");
+			onResize();
+			window.addEventListener("resize", onResize);
+		})
 		.catch((message) => 
 		{
-          alert(message);
-        });
-      };
+			alert(message);
+		});
+		};
 
-	  let w = window.innerWidth;
-	  let h = window.innerHeight;
-	  console.log(w);
-	  console.log(h);
-	  console.log(gameInstance);
+		let w = window.innerWidth;
+		let h = window.innerHeight;
+		console.log(w);
+		console.log(h);
+		console.log(gameInstance);
+	  }
 	  
 	  function onResize(){
 		
