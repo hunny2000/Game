@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
 	<script src="TemplateData/UnityProgress.javascript"></script>
+	<script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WEBTEST.json", {onProgress: UnityProgress});
+    </script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -75,7 +78,6 @@
         }).catch((message) => {
           alert(message);
         });
-
     </script>
 	<script src="TemplateData/responsive.javascript"></script>
   </body>
