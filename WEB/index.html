@@ -43,15 +43,19 @@
         });
       };
 
-	  console.log(window.innerHeight);
-
+	  let w = window.innerWidth;
+	  let h = window.innerHeight;
+	  console.log(w);
+	  console.log(h);
+	  
 	  window.addEventListener("resize", onResize);
 
 	  function onResize(){
-		gameInstance.SendMessage( "Debug_Test", "OnResize");
+		gameInstance.SendMessage( "DebugTest", "OnResize");
+		gameInstance.SendMessage( "DebugTest", "SetHeight", h);
+		gameInstance.SendMessage( "DebugTest", "SetWidth", w);
 	  }
       document.body.appendChild(script);
     </script>
-	<script src="TemplateData/responsive.javascript"></script>
   </body>
 </html>
