@@ -11,13 +11,15 @@
   </head>
   <body>
     <div class="webgl-wrapper">
+      <div class="aspect"></div>
       <div class="webgl-content">
-        <div id="gameContainer" style="width: 1920px; height: 1080px"></div>
         <div id="unityContainer">
           <canvas id="unity-canvas" style="background: #231F20"></canvas>
         </div>
       </div>
     </div>
+    
+    
     <script src="MyLoader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
