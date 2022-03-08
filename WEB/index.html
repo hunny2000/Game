@@ -107,7 +107,7 @@
         });
       };
 
-	  window.addEventListner('resize', OnResize);
+	  window.addEventListener("resize", OnResize);
 
 	  function OnResize(){
 		gameInstance.SendMessage( 'Debug_Test', 'OnResize');
