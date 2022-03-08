@@ -60,10 +60,12 @@
 	  
 	function onResize(){
 		
-	gameInstance.SendMessage( "Main Camera", "SetHeight", h);
-	gameInstance.SendMessage( "Main Camera", "SetWidth", w);
-	gameInstance.SendMessage( "Main Camera", "OnResize");
+	  gameInstance.SendMessage( "Main Camera", "SetHeight", h);
+	  gameInstance.SendMessage( "Main Camera", "SetWidth", w);
+	  gameInstance.SendMessage( "Main Camera", "OnResize");
 	}
+
+	document.body.appendChild(script);
 	</script>
   </body>
 </html>
