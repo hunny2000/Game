@@ -62,7 +62,7 @@
       document.body.appendChild(script);
 
 	  function onResize(){
-		gameInstance.SendMessage( "Main Camera", 'OnResize');
+		gameInstance.SendMessage( "Main Camera", "OnResize");
 		gameInstance.SendMessage( "Main Camera", "SetHeight", h);
 		gameInstance.SendMessage( "Main Camera", "SetWidth", w);
 	  }
