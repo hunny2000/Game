@@ -59,7 +59,8 @@
 	console.log(gameInstance);
 	  
 	function onResize(){
-		
+	  console.log(w);
+	  console.log(h);
 	  gameInstance.SendMessage( "Main Camera", "SetHeight", h);
 	  gameInstance.SendMessage( "Main Camera", "SetWidth", w);
 	  gameInstance.SendMessage( "Main Camera", "OnResize");
