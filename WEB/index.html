@@ -42,7 +42,7 @@
 		  console.log("SUCESS");
 		  console.log(unityInstance);
 		  console.log(gameInstance);
-		  unityInstance.SendMessage( "DebugTest", "OnResize'");
+		  unityInstance.SendMessage( "Debug Test", "OnResize'");
 		  unityInstance.SendMessage( "Main Camera", "OnResize'");
         })
 		.catch((message) => 
@@ -62,9 +62,9 @@
       document.body.appendChild(script);
 
 	  function onResize(){
-		gameInstance.SendMessage( 'DebugTest', 'OnResize');
-		gameInstance.SendMessage( "DebugTest", "SetHeight", h);
-		gameInstance.SendMessage( "DebugTest", "SetWidth", w);
+		gameInstance.SendMessage( "Debug Test", 'OnResize');
+		gameInstance.SendMessage( "Debug Test", "SetHeight", h);
+		gameInstance.SendMessage( "Debug Test", "SetWidth", w);
 	  }
     </script>
   </body>
