@@ -53,7 +53,7 @@
       document.body.appendChild(script);
 
 	  function onResize(){
-		gameInstance.SendMessage( "DebugTest", "OnResize");
+		gameInstance.SendMessage( 'DebugTest', 'OnResize');
 		gameInstance.SendMessage( "DebugTest", "SetHeight", h);
 		gameInstance.SendMessage( "DebugTest", "SetWidth", w);
 	  }
