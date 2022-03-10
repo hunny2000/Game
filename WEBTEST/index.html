@@ -51,14 +51,11 @@
 	});
 	};
 	
-	if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
-	{
+	#if (UNITY_IOS || UNITY_ANDROID)
 		container.className = "unity-mobile";
-	}
-	else
-	{
+	#else
 		window.addEventListener("resize", onResize);
-		
+
 		let w = window.innerWidth;
 		let h = window.innerHeight;
 		console.log(w);
@@ -71,9 +68,8 @@
 		gameInstance.SendMessage( "Main Camera", "SetWidth", window.innerWidth);
 		gameInstance.SendMessage( "Main Camera", "OnResize");
 		}
-	}
+	#endif
 	
-
 	document.body.appendChild(script);
 	</script>
   </body>
