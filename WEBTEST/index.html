@@ -52,8 +52,17 @@
 	};
 	
 	if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
-		container.className = "unity-mobile";
-		config.devicePixelRatio = 1;
+		
+		let w = window.innerWidth;
+		let h = window.innerHeight;
+		console.log(w);
+		console.log(h);
+		console.log(gameInstance);
+
+		console.log(window.innerWidth + "x" + window.innerHeight);
+		gameInstance.SendMessage( "Main Camera", "SetHeight", h);
+		gameInstance.SendMessage( "Main Camera", "SetWidth", w);
+		gameInstance.SendMessage( "Main Camera", "OnResize");
 	}
 	else{
 		window.addEventListener("resize", onResize);
