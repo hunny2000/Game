@@ -44,6 +44,9 @@
 	{
 		gameInstance = unityInstance;
 		console.log("SUCESS");
+		if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
+			onResizeMobile();
+		}
 	})
 	.catch((message) => 
 	{
@@ -52,20 +55,18 @@
 	};
 	
 	if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
-		
 		let w = window.innerWidth;
 		let h = window.innerHeight;
 		console.log(w);
 		console.log(h);
 		console.log(gameInstance);
 		
-		function onResize(){
+		function onResizeMobile(){
 		console.log(window.innerWidth + "x" + window.innerHeight);
 		gameInstance.SendMessage( "Main Camera", "SetHeight", h);
 		gameInstance.SendMessage( "Main Camera", "SetWidth", w);
 		gameInstance.SendMessage( "Main Camera", "OnResize");
 		}
-		onResize();
 	}
 	else{
 		window.addEventListener("resize", onResize);
