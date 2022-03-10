@@ -47,8 +47,12 @@
 		if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
 			if(!SetRes)
 			{
+				SetRes = true;
 				onResizeMobile();
 			}
+		}
+		else{
+			onResize();
 		}
 	})
 	.catch((message) => 
@@ -69,7 +73,6 @@
 
 			function onResizeMobile()
 			{
-				SetRes = true;
 				console.log(window.innerWidth + "x" + window.innerHeight);
 				gameInstance.SendMessage( "Main Camera", "SetHeight", h);
 				gameInstance.SendMessage( "Main Camera", "SetWidth", w);
