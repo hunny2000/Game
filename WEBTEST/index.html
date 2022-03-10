@@ -45,7 +45,10 @@
 		gameInstance = unityInstance;
 		console.log("SUCESS");
 		if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
-			onResizeMobile();
+			if(!SetRes)
+			{
+				onResizeMobile();
+			}
 		}
 	})
 	.catch((message) => 
@@ -54,18 +57,24 @@
 	});
 	};
 	
+	var SetRes = false;
 	if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
-		let w = window.innerWidth;
-		let h = window.innerHeight;
-		console.log(w);
-		console.log(h);
-		console.log(gameInstance);
-		
-		function onResizeMobile(){
-		console.log(window.innerWidth + "x" + window.innerHeight);
-		gameInstance.SendMessage( "Main Camera", "SetHeight", h);
-		gameInstance.SendMessage( "Main Camera", "SetWidth", w);
-		gameInstance.SendMessage( "Main Camera", "OnResize");
+		if(!SetRes)
+		{
+			let w = window.innerWidth;
+			let h = window.innerHeight;
+			console.log(w);
+			console.log(h);
+			console.log(gameInstance);
+
+			function onResizeMobile()
+			{
+				SetRes = true;
+				console.log(window.innerWidth + "x" + window.innerHeight);
+				gameInstance.SendMessage( "Main Camera", "SetHeight", h);
+				gameInstance.SendMessage( "Main Camera", "SetWidth", w);
+				gameInstance.SendMessage( "Main Camera", "OnResize");
+			}
 		}
 	}
 	else{
