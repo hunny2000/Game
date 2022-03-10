@@ -68,20 +68,20 @@
 	else{
 		config.matchWebGLToCanvasSize = false;
 
-		//window.addEventListener("resize", onResize);
-		//
-		//let w = window.innerWidth;
-		//let h = window.innerHeight;
-		//console.log(w);
-		//console.log(h);
-		//console.log(gameInstance);
-		//
-		//function onResize(){
-		//console.log(window.innerWidth + "x" + window.innerHeight);
-		//gameInstance.SendMessage( "Main Camera", "SetHeight", window.innerHeight);
-		//gameInstance.SendMessage( "Main Camera", "SetWidth", window.innerWidth);
-		//gameInstance.SendMessage( "Main Camera", "OnResize");
-		//}
+		window.addEventListener("resize", onResize);
+		
+		let w = window.innerWidth;
+		let h = window.innerHeight;
+		console.log(w);
+		console.log(h);
+		console.log(gameInstance);
+		
+		function onResize(){
+		console.log(window.innerWidth + "x" + window.innerHeight);
+		gameInstance.SendMessage( "Main Camera", "SetHeight", window.innerHeight);
+		gameInstance.SendMessage( "Main Camera", "SetWidth", window.innerWidth);
+		gameInstance.SendMessage( "Main Camera", "OnResize");
+		}
 	}
 
 	document.body.appendChild(script);
